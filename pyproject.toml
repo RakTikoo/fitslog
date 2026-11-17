@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fitslog"
+version = "0.1.0"
+description = "Turn a folder tree of telescope FITS files into one clean night-log CSV, with header keywords normalised across instruments, plus an audit of problem files."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RakTikoo" }]
+keywords = ["astronomy", "fits", "observing-log", "astropy"]
+dependencies = ["astropy>=5.1"]
+
+[project.scripts]
+fitslog = "fitslog.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RakTikoo/fitslog"
+
+[tool.setuptools.packages.find]
+include = ["fitslog*"]
