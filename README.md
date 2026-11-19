@@ -1,5 +1,7 @@
 # fitslog — turn a folder of FITS files into one night-log CSV
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/RakTikoo/fitslog)
+
 **Point fitslog at a folder tree of telescope FITS files and get one clean night-log CSV — header keywords normalised across instruments — plus an audit of the problem files.**
 
 Every observatory, instrument, and capture program spells the same header keywords differently: exposure time is `EXPTIME` here, `EXPOSURE` there, `EXPT` somewhere else; the target is `OBJECT`, `TARGET`, or `OBJNAME`. Building a night log by hand means re-learning those spellings for every folder. fitslog knows the spellings, reads **headers only** (image data is never loaded), recurses the whole tree, and writes one spreadsheet with the same columns for every file — and flags the files that would have silently corrupted your log: corrupt files, missing fields, duplicated keywords, headers with no WCS.
@@ -41,6 +43,8 @@ With Scoop (Windows):
 scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
 scoop install fitslog
 ```
+
+**For agent users:** this repository ships a `SKILL.md` for AI agents. Install it with `npx skills add RakTikoo/fitslog`.
 
 ## Demo
 
