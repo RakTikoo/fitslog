@@ -11,10 +11,9 @@ compatibility: Requires Python 3.10+ and Astropy. Installing needs network acces
 
 fitslog scans a folder tree of FITS files — headers only, image data is
 never loaded — and writes one night-log CSV with the same columns for
-every file, normalising the different keyword spellings different
-instruments use for the same thing. A second, optional audit CSV flags
-the problem files: corrupt files, missing fields, duplicated keywords,
-headers with no WCS.
+every file, normalising the keyword spellings different instruments use
+for the same thing. A second, optional audit CSV flags the problem
+files: corrupt files, missing fields, duplicated keywords, no WCS.
 
 ## Install
 
@@ -33,8 +32,7 @@ fitslog scan /data/night1 --out nightlog.csv --audit audit.csv
 - The scan recurses all subfolders. Files ending in `.fits`, `.fit` or
   `.fts` (any case) are scanned, including compressed forms (`.fits.gz`,
   `.bz2`, `.xz`, fpack `.fits.fz`).
-- `--audit` is optional; the printed summary and flagged-file list appear
-  either way.
+- `--audit` is optional; the printed summary and flagged-file list appear either way.
 - One row per file appears in the night log — including corrupt files,
   which get a mostly-empty row and an audit entry. A corrupt file never
   stops the scan.
@@ -65,8 +63,7 @@ be trusted.
 
 - Headers only: fitslog cannot tell you a frame is clouded out or out of
   focus. A file whose data section is corrupt but whose header is intact
-  scans cleanly; only files that cannot be opened as FITS at all are
-  flagged `unreadable`.
+  scans cleanly; only files unopenable as FITS are flagged `unreadable`.
 - Values are not range-checked: a negative exposure time or an
   out-of-range coordinate is logged as written. Only unparseable
   coordinates are flagged.
