@@ -1,4 +1,4 @@
-# fitslog
+# fitslog — turn a folder of FITS files into one night-log CSV
 
 **Point fitslog at a folder tree of telescope FITS files and get one clean night-log CSV — header keywords normalised across instruments — plus an audit of the problem files.**
 

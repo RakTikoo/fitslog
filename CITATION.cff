@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - name: RakTikoo
+title: "fitslog: turn a folder tree of FITS files into one night-log CSV, with an audit of problem files"
+version: 0.1.0
+date-released: 2026-11-17
+license: MIT
+url: "https://github.com/RakTikoo/fitslog"
+repository-code: "https://github.com/RakTikoo/fitslog"
+abstract: >-
+  Scans a folder tree of telescope FITS files (headers only) and writes
+  one night-log CSV with header keywords normalised across instruments,
+  plus an audit flagging corrupt files, missing fields, duplicated
+  keywords and headers with no WCS.
+keywords:
+  - astronomy
+  - FITS
+  - night log
+  - header audit

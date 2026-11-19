@@ -1,6 +1,6 @@
 ---
 name: fitslog
-description: Turn a folder tree of telescope FITS files into one night-log CSV with header keywords normalised across instruments (EXPTIME/EXPOSURE/EXPT, OBJECT/TARGET/OBJNAME and more), plus an audit flagging corrupt files, missing fields, duplicated keywords and headers with no WCS. Use when asked to build a night log, catalogue or inventory a folder of FITS files, summarise an observing night, or check FITS headers for problems.
+description: Turn a folder tree of telescope FITS files into one night-log CSV with header keywords normalised across instruments (EXPTIME/EXPOSURE/EXPT, OBJECT/TARGET/OBJNAME and more), plus an audit flagging corrupt files, missing fields, duplicated keywords and headers with no WCS. Use when asked to build a night log, catalogue or inventory a folder of FITS files, summarise an observing night, or check FITS headers for problems. Not for rendering FITS files as contact-sheet images (use fitspeek), converting observation times to BJD_TDB (use bjd), or cross-matching catalogues (use epochmatch).
 license: MIT
 compatibility: Requires Python 3.10+ and Astropy. Installing needs network access to GitHub; the tool itself runs fully offline and reads headers only.
 ---
