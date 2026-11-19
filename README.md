@@ -143,6 +143,14 @@ $ python3 run_tests.py
 - The alias table covers common spellings, not every observatory that ever existed. If your instrument's spelling is missing, the file shows up with empty columns — the audit's missing-field flags make that visible rather than silent.
 - WCS detection is a presence check (CD, PC, or CDELT keywords), not a validity check — a header can carry WCS keywords that are still wrong.
 
+## Use with an AI agent
+
+This repo ships a [SKILL.md](SKILL.md) written to the Agent Skills open
+standard. If your coding agent supports skills, point it at this repo and
+it can install fitslog, run it on your FITS folders, and read the results
+for you. The skill works as documented when the repo is cloned under its
+real name (`fitslog`) — the standard matches a skill to its folder name.
+
 ## License
 
 MIT — see `LICENSE`.
