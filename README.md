@@ -14,6 +14,34 @@ $ pip install git+https://github.com/RakTikoo/fitslog
 
 Requires Python 3.10+ and Astropy.
 
+Or install the wheel straight from this repo's release assets (no package
+registry involved):
+
+```sh
+pip install https://github.com/RakTikoo/fitslog/releases/download/v0.1.0/fitslog-0.1.0-py3-none-any.whl
+```
+
+Or install from the git repo with pipx or uv:
+
+```sh
+pipx install git+https://github.com/RakTikoo/fitslog.git@v0.1.0
+uv tool install --from git+https://github.com/RakTikoo/fitslog.git@v0.1.0 fitslog
+```
+
+With Homebrew (macOS/Linux):
+
+```sh
+brew tap RakTikoo/tools
+brew install RakTikoo/tools/fitslog
+```
+
+With Scoop (Windows):
+
+```powershell
+scoop bucket add RakTikoo https://github.com/RakTikoo/scoop-bucket
+scoop install fitslog
+```
+
 ## Demo
 
 The sample tree below is synthetic — regenerate it any time with
